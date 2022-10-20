@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(28 28 28);
+  color: rgb(196 196 196);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter {
+  flex-direction: column;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  border: 1px solid rgb(106 186 133);
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .count {
+    font-size: 1.5rem;
+  }
+}

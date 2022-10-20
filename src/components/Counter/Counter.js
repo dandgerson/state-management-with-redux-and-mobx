@@ -5,7 +5,7 @@ import { decrement, increment, set } from "../../store/counterReducer";
 class Counter extends Component {
   render() {
     const { count, increment, decrement, set } = this.props;
-    console.log({ count, increment, decrement, set });
+
     return (
       <div className="counter">
         <div className="title">Counter</div>
@@ -24,11 +24,11 @@ const mapStateToProps = (state) => ({
   count: state.counter.count,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  increment: () => dispatch(increment()),
-  decrement: () => dispatch(decrement()),
-  set: (count) => dispatch(set(count)),
-});
+const mapDispatchToProps = {
+  increment,
+  decrement,
+  set,
+};
 
 const CounterContainer = connect(mapStateToProps, mapDispatchToProps)(Counter);
 

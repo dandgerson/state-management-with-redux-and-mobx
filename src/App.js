@@ -1,14 +1,10 @@
-import CounterContainer from "./components/Counter/Counter";
-import normalizedState from "./Kanban/normalized-state";
+import Kanban from "./components/Kanban/Kanban";
+import normalizedState from "./normalized-state";
 
 const App = () => {
-  console.log({
-    normalizedState,
-  });
-
   return (
     <div className="app">
-      <CounterContainer />
+      <Kanban />
     </div>
   );
 };

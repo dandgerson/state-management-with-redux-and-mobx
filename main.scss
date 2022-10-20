@@ -34,3 +34,57 @@ body {
     font-size: 1.5rem;
   }
 }
+
+.kanban {
+  display: flex;
+  gap: 2rem;
+
+  .users {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+
+    hr {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      input {
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  .lists {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      input {
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}

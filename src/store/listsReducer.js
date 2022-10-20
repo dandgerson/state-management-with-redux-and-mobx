@@ -1,4 +1,4 @@
-import { lists } from "../../Kanban/normalized-state";
+import { lists } from "../normalized-state";
 
 const listsReducer = (state = lists, action) => {
   console.log({ state, action });

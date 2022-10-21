@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CreateCard = () => {
+const CreateCard = ({ listId, createCard }) => {
   const [cardTitle, setCardTitle] = useState("");
   const [cardDescription, setCardDescription] = useState("");
 
@@ -10,7 +10,16 @@ const CreateCard = () => {
         onSubmit={(e) => {
           e.preventDefault();
 
-          console.dir(e.target);
+          createCard({
+            listId,
+            cardData: {
+              title: cardTitle,
+              description: cardDescription,
+            },
+          });
+
+          setCardTitle("");
+          setCardDescription("");
         }}
       >
         <input

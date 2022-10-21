@@ -1,14 +1,12 @@
-import Card from "./Card";
 import CardContainer from "./CardContainer";
-import CreateCard from "./CreateCard";
+import CreateCardContainer from "./CreateCardContainer";
 
 const List = ({ list = {}, removeList }) => {
-  console.log({ list });
   return (
     <div className="list">
       <div className="list_title">{list.title}</div>
 
-      <CreateCard />
+      <CreateCardContainer listId={list.id} />
 
       <div className="cardsList">
         {list.cards?.map((cardId) => (

@@ -1,4 +1,4 @@
-const Card = ({ card }) => {
+const Card = ({ card = {} }) => {
   return (
     <div className="card">
       <div className="card_title">{card.title}</div>

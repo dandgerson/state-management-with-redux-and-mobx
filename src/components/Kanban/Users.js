@@ -16,28 +16,23 @@ const Users = () => {
           console.dir(e.target);
         }}
       >
-        <label htmlFor="userName">
-          Name
-          <input
-            type="text"
-            name="userName"
-            id="userName"
-            placeholder="Name"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </label>
-        <label htmlFor="email">
-          Email
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+        <input
+          type="text"
+          name="userName"
+          id="userName"
+          placeholder="Name"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+        />
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
         <button disabled={!userName || !email}>Create User</button>
       </form>

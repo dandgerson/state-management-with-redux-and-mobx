@@ -12,18 +12,16 @@ const Lists = ({ listsIds }) => {
 
           console.dir(e.target);
         }}
+        className="createList"
       >
-        <label htmlFor="listTitle">
-          List title
-          <input
-            type="text"
-            name="listTitle"
-            id="listTitle"
-            placeholder="New list title"
-            value={listTitle}
-            onChange={(e) => setListTitle(e.target.value)}
-          />
-        </label>
+        <input
+          type="text"
+          name="listTitle"
+          id="listTitle"
+          placeholder="New list title"
+          value={listTitle}
+          onChange={(e) => setListTitle(e.target.value)}
+        />
 
         <button disabled={!listTitle}>Create New List</button>
       </form>

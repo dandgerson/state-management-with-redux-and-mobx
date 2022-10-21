@@ -1,8 +1,8 @@
 import { useState } from "react";
+import ListContainer from "./ListContainer";
 
-const Lists = () => {
+const Lists = ({ listsIds }) => {
   const [listTitle, setListTitle] = useState("");
-  const [lists, setLists] = useState([]);
 
   return (
     <div className="lists">
@@ -29,8 +29,8 @@ const Lists = () => {
       </form>
 
       <div className="listsList">
-        {lists.map((list) => (
-          <div key={list.id}>{list.title}</div>
+        {listsIds.map((id) => (
+          <ListContainer key={id} listId={id} />
         ))}
       </div>
     </div>

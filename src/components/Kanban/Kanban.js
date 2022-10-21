@@ -1,11 +1,11 @@
-import Lists from "./Lists";
+import ListsContainer from "./ListsContainer";
 import Users from "./Users";
 
 const Kanban = () => {
   return (
     <div className="kanban">
       <Users />
-      <Lists />
+      <ListsContainer />
     </div>
   );
 };

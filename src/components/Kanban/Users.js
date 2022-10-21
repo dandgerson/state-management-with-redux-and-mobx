@@ -8,7 +8,6 @@ const Users = () => {
   return (
     <div className="users">
       <h2>Users</h2>
-      <hr />
 
       <form
         onSubmit={(e) => {

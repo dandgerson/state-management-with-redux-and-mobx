@@ -11,4 +11,27 @@ const cardsReducer = (state = cards, action) => {
   return state;
 };
 
+const defaultCardData = {
+  title: "",
+  description: "",
+  assignedTo: "",
+};
+
+export const createCard = ({ listId, cardData }) => {
+  const card = {
+    id: Date.now().toString(),
+    ...defaultCardData,
+    ...cardData,
+  };
+
+  return {
+    type: t.CREATE_CARD,
+    payload: {
+      card,
+      listId,
+      cardId: card.id,
+    },
+  };
+};
+
 export default cardsReducer;

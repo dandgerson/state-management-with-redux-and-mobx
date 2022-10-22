@@ -16,4 +16,24 @@ const listsReducer = (state = lists, action) => {
   return state;
 };
 
+const defaultListData = {
+  title: "",
+  cards: [],
+};
+
+export const createList = ({ listData }) => {
+  const list = {
+    id: Date.now().toString(),
+    ...defaultListData,
+    ...listData,
+  };
+  return {
+    type: t.CREATE_LIST,
+    payload: {
+      list,
+      listId: list.id,
+    },
+  };
+};
+
 export default listsReducer;

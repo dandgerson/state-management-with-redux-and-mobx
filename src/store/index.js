@@ -3,6 +3,11 @@ import cardsReducer from "./cardsReducer";
 import counterReducer from "./counterReducer";
 import listsReducer from "./listsReducer";
 
+export const t = {
+  CREATE_CARD: "CREATE_CARD",
+  CREATE_LIST: "CREATE_LIST",
+};
+
 const store = createStore(
   combineReducers({
     counter: counterReducer,

@@ -1,13 +1,16 @@
-import set from "lodash/fp/set";
+import { t } from ".";
 import { lists } from "../normalized-state";
-import { t } from "./cardsReducer";
+import { addEntity, addIdToChildren } from "./_utilities";
 
 const listsReducer = (state = lists, action) => {
   if (action.type === t.CREATE_CARD) {
     const { listId, cardId } = action.payload;
+    return addIdToChildren(state, listId, "cards", cardId);
+  }
 
-    const cards = [...state.entities[listId].cards, cardId];
-    return set(["entities", listId, "cards"], cards, state);
+  if (action.type === t.CREATE_LIST) {
+    const { listId, list } = action.payload;
+    return addEntity(state, list, listId);
   }
 
   return state;

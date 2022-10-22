@@ -1,18 +1,24 @@
 import { useState } from "react";
 import ListContainer from "./ListContainer";
 
-const Lists = ({ listsIds }) => {
+const Lists = ({ listsIds, createList }) => {
   const [listTitle, setListTitle] = useState("");
 
   return (
     <div className="lists">
       <form
+        className="createList"
         onSubmit={(e) => {
           e.preventDefault();
 
-          console.dir(e.target);
+          createList({
+            listData: {
+              title: listTitle,
+            },
+          });
+
+          setListTitle("");
         }}
-        className="createList"
       >
         <input
           type="text"
